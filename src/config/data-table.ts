@@ -3,7 +3,7 @@ export type DataTableConfig = typeof dataTableConfig;
 export const dataTableConfig = {
   textOperators: [
     { label: 'Contains', value: 'iLike' as const },
-    { label: 'Does not contain', value: 'notILike' as const },
+    { label: 'bouichidars not contain', value: 'notILike' as const },
     { label: 'Is', value: 'eq' as const },
     { label: 'Is not', value: 'ne' as const },
     { label: 'Is empty', value: 'isEmpty' as const },

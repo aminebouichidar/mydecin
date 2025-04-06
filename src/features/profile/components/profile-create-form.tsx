@@ -100,11 +100,11 @@ const ProfileCreateForm: React.FC<ProfileFormType> = ({ initialData }) => {
       fields: fields
         ?.map((_, index) => [
           `jobs.${index}.jobtitle`,
-          `jobs.${index}.employer`,
+          // `jobs.${index}.employer`,
           `jobs.${index}.startdate`,
-          `jobs.${index}.enddate`,
-          `jobs.${index}.jobcountry`,
-          `jobs.${index}.jobcity`
+          `jobs.${index}.enddate`
+          // `jobs.${index}.jobcountry`,
+          // `jobs.${index}.jobcity`
           // Add other field names as needed
         ])
         .flat()
@@ -137,8 +137,33 @@ const ProfileCreateForm: React.FC<ProfileFormType> = ({ initialData }) => {
     }
   };
 
-  const countries = [{ id: 'wow', name: 'india' }];
-  const cities = [{ id: '2', name: 'kerala' }];
+  const countries = [{ id: 'wow', name: 'morocco' }];
+  const cities = [
+    {
+      id: '2',
+      name: 'Rabat'
+    },
+    {
+      id: '3',
+      name: 'Casablanca'
+    },
+    {
+      id: '4',
+      name: 'Salé'
+    },
+    {
+      id: '5',
+      name: 'Sala al Jadida'
+    },
+    {
+      id: '6',
+      name: 'Meknès'
+    },
+    {
+      id: '7',
+      name: 'Marakech'
+    }
+  ];
 
   return (
     <>
@@ -213,7 +238,7 @@ const ProfileCreateForm: React.FC<ProfileFormType> = ({ initialData }) => {
                       <FormControl>
                         <Input
                           disabled={loading}
-                          placeholder='John'
+                          placeholder='amine'
                           {...field}
                         />
                       </FormControl>
@@ -247,7 +272,7 @@ const ProfileCreateForm: React.FC<ProfileFormType> = ({ initialData }) => {
                       <FormControl>
                         <Input
                           disabled={loading}
-                          placeholder='johndoe@gmail.com'
+                          placeholder='aminebouichidar@gmail.com'
                           {...field}
                         />
                       </FormControl>
@@ -357,7 +382,7 @@ const ProfileCreateForm: React.FC<ProfileFormType> = ({ initialData }) => {
                           errors?.jobs?.[index] && 'text-red-700'
                         )}
                       >
-                        {`Work Experience ${index + 1}`}
+                        {`Historique de maladie ${index + 1}`}
 
                         <Button
                           variant='outline'
@@ -384,7 +409,7 @@ const ProfileCreateForm: React.FC<ProfileFormType> = ({ initialData }) => {
                             name={`jobs.${index}.jobtitle`}
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel>Job title</FormLabel>
+                                <FormLabel>Nom de la maladie</FormLabel>
                                 <FormControl>
                                   <Input
                                     type='text'
@@ -396,7 +421,7 @@ const ProfileCreateForm: React.FC<ProfileFormType> = ({ initialData }) => {
                               </FormItem>
                             )}
                           />
-                          <FormField
+                          {/* <FormField
                             control={form.control}
                             name={`jobs.${index}.employer`}
                             render={({ field }) => (
@@ -412,13 +437,13 @@ const ProfileCreateForm: React.FC<ProfileFormType> = ({ initialData }) => {
                                 <FormMessage />
                               </FormItem>
                             )}
-                          />
+                          /> */}
                           <FormField
                             control={form.control}
                             name={`jobs.${index}.startdate`}
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel>Start date</FormLabel>
+                                <FormLabel>Date d&apos;apparution</FormLabel>
                                 <FormControl>
                                   <Input
                                     type='date'
@@ -430,7 +455,7 @@ const ProfileCreateForm: React.FC<ProfileFormType> = ({ initialData }) => {
                               </FormItem>
                             )}
                           />
-                          <FormField
+                          {/* <FormField
                             control={form.control}
                             name={`jobs.${index}.enddate`}
                             render={({ field }) => (
@@ -446,8 +471,8 @@ const ProfileCreateForm: React.FC<ProfileFormType> = ({ initialData }) => {
                                 <FormMessage />
                               </FormItem>
                             )}
-                          />
-                          <FormField
+                          /> */}
+                          {/* <FormField
                             control={form.control}
                             name={`jobs.${index}.jobcountry`}
                             render={({ field }) => (
@@ -513,7 +538,7 @@ const ProfileCreateForm: React.FC<ProfileFormType> = ({ initialData }) => {
                                 <FormMessage />
                               </FormItem>
                             )}
-                          />
+                          /> */}
                         </div>
                       </AccordionContent>
                     </AccordionItem>

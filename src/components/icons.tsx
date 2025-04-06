@@ -31,7 +31,8 @@ import {
   IconX,
   IconLayoutKanban,
   IconBrandGithub,
-  IconCalendar
+  IconCalendar,
+  IconBrandGoogle
 } from '@tabler/icons-react';
 import { LogOut } from 'lucide-react';
 
@@ -70,5 +71,6 @@ export const Icons = {
   twitter: IconBrandTwitter,
   check: IconCheck,
   calendar: IconCalendar,
-  logout: LogOut
+  logout: LogOut,
+  IconBrandGoogle: IconBrandGoogle
 };
